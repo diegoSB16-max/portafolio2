@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mi Portafolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header" role="banner">
+      <div class="brand">
+        <div class="logo">
+          <img class="profile-photo" src="assets/profile-small.jpg" srcset="assets/profile-small.jpg 1x, assets/profile.jpg 2x" alt="Foto de Diego Suárez" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <strong>Diego Suárez</strong>
+          <div class="muted" style="font-size:.85rem">Desarrollador Frontend</div>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero card" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div>
+            <h1 id="hero-title">Hola — soy Diego, Creo interfaces simples, útiles y agradables de usar.</h1>
+            <p class="lead">Me especializo en front-end moderno: HTML, CSS y JavaScript. Aquí verás proyectos escolares y personales que muestran mi trabajo.</p>
+            <p style="margin-top:.75rem"><a href="#projects" class="cta">Ver proyectos →</a></p>
+          </div>
+          <div class="mb-small muted" style="text-align:right">Ubicación: México • Disponible para prácticas</div>
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside>
+          <section class="card about" id="about">
+            <h2>Sobre mí</h2>
+            <p class="summary">Estudio desarrollo web y me interesa crear experiencias rápidas y accesibles. Me gusta aprender cosas nuevas y trabajar en equipo.</p>
+            <ul class="skill-list" style="margin-top:.6rem">
+              <li class="skill"><span class="chip">HTML</span><span class="meta">Maquetación semántica</span></li>
+              <li class="skill"><span class="chip">CSS</span><span class="meta">Responsive, Grid, Flexbox</span></li>
+              <li class="skill"><span class="chip">JavaScript</span><span class="meta">ES6+, DOM</span></li>
+            </ul>
+          </section>
+
+          <section class="card skills">
+            <h2>Habilidades</h2>
+            <div class="skills-grid">
+              <div>
+                <h3 style="margin:.2rem 0;font-size:.95rem">Habilidades duras</h3>
+                <ul class="skill-list">
+                  <li class="skill"><span class="chip">Git</span><span class="meta">Gestión de bases de datos</span></li>
+                  <li class="skill"><span class="chip">React</span><span class="meta">Creación de sistemas de diseño</span></li>
+                  <li class="skill"><span class="chip">Netlify</span><span class="meta">Testing de interfaz</span></li>
+                </ul>
+              </div>
+              <div>
+                <h3 style="margin:.2rem 0;font-size:.95rem">Habilidades blandas</h3>
+                <ul class="skill-list">
+                  <li class="skill"><span class="meta">atención al detalle</span></li>
+                  <li class="skill"><span class="meta">adaptabilidad</span></li>
+                  <li class="skill"><span class="meta">colaboración</span></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </aside>
+
+        <section aria-live="polite">
+          <section class="card" id="projects">
+            <h2>Proyectos</h2>
+            <div class="projects-grid">
+              <article class="project">
+                <div class="title">Proyecto 1 — Blog Personal</div>
+                <div class="desc">Creación de un blog personal con diseño responsive y rutas dinámicas. Implementé animaciones suaves para mejorar la experiencia de usuario.</div>
+                <div class="links">
+                  <a class="pill" href="#">Ver demo</a>
+                  <a class="pill" href="#">Código</a>
+                </div>
+              </article>
+
+              <article class="project">
+                <div class="title">Proyecto 2 — App de tareas</div>
+                <div class="desc">Pequeña aplicación CRUD con almacenamiento local para gestión de tareas.</div>
+                <div class="links">
+                  <a class="pill" href="#">Ver demo</a>
+                  <a class="pill" href="#">Código</a>
+                </div>
+              </article>
+
+              <article class="project">
+                <div class="title">Proyecto 3 — Galería de Fotos Interactiva</div>
+                <div class="desc">Creación de una galería de fotos con diseño responsive y efectos de hover animados. Permite filtrar imágenes por categorías y ofrece una experiencia visual atractiva y dinámica.</div>
+                <div class="links">
+                  <a class="pill" href="#">Ver demo</a>
+                  <a class="pill" href="#">Código</a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="card contact" id="contact">
+            <h2>Contacto</h2>
+            <p class="muted">Pulsa el botón para mostrar mi información de contacto y escribe tu nombre para que te salude.</p>
+
+            <button id="contact-toggle" aria-expanded="false" aria-controls="contact-details" class="contact-toggle">Mostrar contacto</button>
+
+            <div id="contact-details" class="contact-details" hidden>
+              <ul class="contact-list">
+                <li>Email: <a href="mailto:diegosuarezbeltran7@gmail.com">diegosuarezbeltran7@gmail.com</a></li>
+                <li>GitHub: <a href="https://github.com/diegosuarezbeltran" target="_blank" rel="noopener">github.com/diegosuarezbeltran</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/diegosuarezbeltran" target="_blank" rel="noopener">linkedin.com/in/diegosuarezbeltran</a></li>
+              </ul>
+
+              <form id="greet-form" class="greet-form" aria-label="Formulario de saludo">
+                <label for="visitor-name" class="sr-only">Tu nombre</label>
+                <input id="visitor-name" name="visitor" type="text" placeholder="Escribe tu nombre" required>
+                <button type="submit">Decir hola</button>
+              </form>
+
+              <div id="greeting" class="greeting" aria-live="polite"></div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="muted">© 2025 Diego Suárez — Portafolio creado para entrega escolar</div>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script>
+;(function(){
+  const toggle = document.getElementById('contact-toggle');
+  const details = document.getElementById('contact-details');
+  const form = document.getElementById('greet-form');
+  const nameInput = document.getElementById('visitor-name');
+  const greeting = document.getElementById('greeting');
+
+  if(toggle && details){
+    toggle.addEventListener('click', () => {
+      const isOpen = details.classList.toggle('open');
+      if(isOpen){
+        details.hidden = false;
+        toggle.setAttribute('aria-expanded','true');
+        const inp = nameInput;
+        if(inp) setTimeout(()=> inp.focus(), 200);
+      } else {
+        toggle.setAttribute('aria-expanded','false');
+        setTimeout(()=> details.hidden = true, 320);
+      }
+    });
+  }
+
+  if(form && nameInput && greeting){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const val = nameInput.value.trim();
+      if(!val) return;
+      const name = val.charAt(0).toUpperCase() + val.slice(1);
+      greeting.textContent = `Saludos, ${name}`;
+      nameInput.value = '';
+      nameInput.blur();
+    });
+  }
+})();
+</script>
